@@ -44,8 +44,8 @@ class MNIST:
                      "t10k-labels-idx1-ubyte.gz"]
             for name in files:
 
-                urllib.request.urlretrieve('http://yann.lecun.com/exdb/mnist/' + name, "data/"+name)
-
+                urllib.request.urlretrieve('http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/' + name, "data/"+name)
+                
         train_data = extract_data("data/train-images-idx3-ubyte.gz", 60000)
         train_labels = extract_labels("data/train-labels-idx1-ubyte.gz", 60000)
         self.test_data = extract_data("data/t10k-images-idx3-ubyte.gz", 10000)
