@@ -202,7 +202,8 @@ class CarliniL2:
                 
                 # print out the losses every 10%
                 if iteration%(self.MAX_ITERATIONS//10) == 0:
-                    print(iteration,self.sess.run((self.loss,self.loss1,self.loss2)))
+                    # print(iteration,self.sess.run((self.loss,self.loss1,self.loss2)))
+                    self.sess.run((self.loss,self.loss1,self.loss2))
 
                 # check if we should abort search if we're getting nowhere.
                 if self.ABORT_EARLY and iteration%(self.MAX_ITERATIONS//10) == 0:
